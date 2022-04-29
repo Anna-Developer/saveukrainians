@@ -1,0 +1,447 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+::-webkit-scrollbar-track {
+    background: #4fa5e7;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #f6c10c;
+}
+
+ul,
+li,
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    position: relative;
+    max-width: 1280px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.red-colored {
+    color: rgb(186, 33, 33);
+}
+
+.italic-blue {
+    font-style: italic;
+    color: #4fa5e7;
+}
+
+.bold-yellow {
+    font-style: normal;
+    font-weight: bold;
+    color: #f6c10c;
+}
+
+.bold-red {
+    font-style: normal;
+    font-weight: bold;
+    color: rgb(186, 33, 33);
+}
+
+.decorated__line {
+    width: 100%;
+    border-bottom: 1.5px solid rgb(87, 87, 87);
+    margin: 45px 0px;
+}
+
+.donate-button {
+    font-family: "Amatic SC", cursive;
+    font-weight: 1000;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.donate-button-yellow {
+    font-size: 28px;
+    width: 120px;
+    height: 50px;
+    background-color: #f6c10c;
+    color: #0092ff;
+}
+
+.donate-button-yellow:hover {
+    color: #f6c10c;
+    background-color: #0092ff;
+}
+
+.donate-button-blue {
+    width: 200px;
+    height: 60px;
+    font-size: 40px;
+    background-color: #0092ff;
+    color: #f6c10c;
+}
+
+.donate-button-blue:hover {
+    background-color: #f6c10c;
+    color: #0092ff;
+}
+
+.donate-button-white {
+    width: 200px;
+    height: 60px;
+    font-size: 40px;
+    border: 2px solid white;
+    color: white;
+}
+
+.donate-button-white:hover {
+    background-color: white;
+    color: rgb(186, 33, 33);
+}
+
+.header {
+    width: 100%;
+    position: absolute;
+}
+
+.header__fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0 auto;
+    z-index: 10;
+    background-color: rgba(230, 230, 230, 0.961);
+    animation: fixedHeader 2s forwards;
+}
+
+@keyframes fixedHeader {
+    0% {
+        margin: -100%;
+    }
+}
+
+.header__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+    padding-top: 15px;
+    width: 100%;
+}
+
+.header__content-fixed {
+    max-width: 1280px;
+    width: 95%;
+    margin: 0 auto;
+    padding: 5px 0px;
+}
+
+.header__content-fixed .logo {
+    width: 95px;
+}
+
+.header__content-fixed .btn {
+    color: rgb(186, 33, 33);
+}
+
+.header__content-fixed .btn:hover {
+    color: rgb(120, 18, 18);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    grid-gap: 40px;
+}
+
+.ordinary-btn {
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    letter-spacing: 2px;
+    font-weight: 800;
+    transition: 0.5s;
+}
+
+.btn {
+    color: white;
+}
+
+.btn:hover {
+    color: rgb(210, 222, 233);
+}
+
+.ukraine-btn {
+    color: #4fa5e7;
+    border-bottom: 2px dashed #f6c10c;
+}
+
+.ukraine-btn:hover {
+    color: #f6c10c;
+    border-bottom: 2px dashed #4fa5e7;
+}
+
+.logo {
+    display: block;
+    width: 130px;
+    justify-self: center;
+}
+
+.logo>img {
+    width: 100%;
+}
+
+.donate-button-container {
+    justify-self: right;
+}
+
+.slideshow {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.slideshow__text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 16px;
+    z-index: 2;
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: rgb(250, 250, 250);
+}
+
+.mySlides {
+    display: none;
+}
+
+.fade {
+    position: relative;
+    overflow: hidden;
+}
+
+.fade::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.532);
+    z-index: 1;
+}
+
+.fade img {
+    transition: all 4s ease-out;
+    animation: scale 4s infinite;
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+.war-info {
+    padding: 70px 0px;
+    background-attachment: fixed;
+}
+
+.war-info__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.war-info__text {
+    font-family: "Raleway", sans-serif;
+    text-align: center;
+}
+
+.war-info__text_1 {
+    padding-bottom: 50px;
+    font-weight: bold;
+    max-width: 700px;
+}
+
+.war-info__text_1 h2 {
+    font-size: 25px;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+}
+
+.war-info__text_1 h3 {
+    font-size: 18px;
+    text-transform: lowercase;
+}
+
+.war-info__text_2 {
+    max-width: 800px;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 15px;
+}
+
+.war-info__text_2 p:nth-child(3) {
+    padding-top: 30px;
+    font-size: 25px;
+}
+
+.war-info__content {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 25px;
+}
+
+.block {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template: auto 1fr / 1fr;
+    grid-gap: 15px;
+    font-family: "Raleway", sans-serif;
+}
+
+.block__image {
+    position: relative;
+    padding: 0 0 60% 0;
+}
+
+.block__image img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.title {
+    font-family: "Orelega One", cursive;
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.iamukraine {
+    background-color: rgb(186, 33, 33);
+    padding: 75px 0px;
+}
+
+.iamukraine__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 30px;
+}
+
+.iamukraine__content-text {
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.iamukraine__content-text h2 {
+    font-family: "Raleway", sans-serif;
+    padding-bottom: 10px;
+}
+
+.iamukraine__content-text h3 {
+    font-family: "Orelega One", cursive;
+    letter-spacing: 3px;
+    font-size: 30px;
+}
+
+.iamukraine__video-block {
+    max-width: 800px;
+    width: 100%;
+}
+
+.iamukraine__video-block video {
+    width: 100%;
+    height: 100%;
+}
+
+
+.creators {
+    padding: 80px 0px;
+    background-color: #ededed;
+    color: rgb(26, 26, 26);
+}
+
+.creators__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 25px;
+    text-align: center;
+}
+
+.creators__text {
+    font-family: "Orelega One", cursive;
+    max-width: 850px;
+    font-size: 25px;
+}
+
+.creators__text:nth-of-type(2) {
+    font-size: 20px;
+}
+
+.creators__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 15px;
+}
+
+.creators__container,
+.creators__container a {
+    font-family: "Raleway", sans-serif;
+}
+
+.link {
+    color: #0092ff;
+    text-decoration: underline;
+    transition: .5s;
+}
+
+.link:hover {
+    color: #f6c10c;
+    text-decoration: underline;
+}
+
+.creators__container .bold-red {
+    font-family: "Orelega One", cursive;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+}
