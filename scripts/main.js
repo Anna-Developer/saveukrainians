@@ -53,8 +53,11 @@ window.onscroll = () => {
 
 const headerBurger = document.getElementById("headerBurger");
 const menuBlock = document.getElementById("menuBlock");
+const body = document.getElementById("body")
 
 function switchMenu() {
-    menuBlock.classList.toggle('d-none');    
+    menuBlock.classList.toggle("d-none");
+    headerBurger.classList.toggle("active");
+    body.classList.toggle("hide-content")
 }
 headerBurger.addEventListener('click', switchMenu);
