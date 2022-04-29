@@ -136,7 +136,6 @@ a {
     align-items: center;
     justify-content: center;
     padding-top: 15px;
-    width: 100%;
 }
 
 .header__content-fixed {
@@ -162,7 +161,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: left;
-    grid-gap: 40px;
+    grid-gap: 20px;
 }
 
 .ordinary-btn {
@@ -265,6 +264,8 @@ a {
         transform: scale(1.2);
     }
 }
+
+
 
 .war-info {
     padding: 70px 0px;
@@ -444,4 +445,104 @@ a {
     font-family: "Orelega One", cursive;
     font-size: 20px;
     letter-spacing: 1.5px;
+}
+
+@media screen and (max-width: 940px) {
+    .ordinary-btn {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 854px) {
+    .header__content {
+        justify-content: space-between;
+    }
+
+    .header__burger {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        cursor: pointer;
+        z-index: 150;
+    }
+
+    .header__burger span {
+        position: absolute;
+        background-color: rgb(255, 0, 0);
+        left: 0;
+        width: 100%;
+        height: 2px;
+        top: 9px;
+    }
+
+    .header__burger:before,
+    .header__burger::after {
+        content: '';
+        background-color: rgb(250, 0, 0);
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+    }
+
+    .header__burger:before {
+        top: 0;
+    }
+
+    .header__burger::after {
+        bottom: 0;
+    }
+
+    .d-none {
+        display: none;
+    }
+
+    .menu__block {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #ededed;
+        z-index: 100;
+        flex-direction: column;
+    }
+
+    .menu {
+        position: absolute;
+        top: 250px;
+        left: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: flex-start;
+        grid-gap: 40px;
+    }
+
+    .btn {
+        color: rgb(26, 26, 26);
+    }
+
+    .menu a {
+        font-size: 30px;
+    }
+
+    .logo,
+    .donate-button-container {
+        z-index: 100;
+    }
+
+    .war-info__content {
+        grid-template-columns: repeat(2, minmax(250px, 1fr));
+        grid-template-rows: repeat(3, auto);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .war-info__content {
+        grid-template-columns: minmax(250px, 1fr);
+        grid-template-rows: repeat(6, auto);
+        grid-gap: 25px;
+    }
 }

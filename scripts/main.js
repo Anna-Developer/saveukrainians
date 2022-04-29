@@ -19,13 +19,13 @@ function showSlides() {
     setTimeout(showSlides, 3500); // Change image every 2 seconds
 }
 
-const anchors = document.querySelectorAll('a[href*="#"]')
+const anchors = document.querySelectorAll('a[href*="#"]');
 
 for (let anchor of anchors) {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault()
+        e.preventDefault();
 
-        const blockID = anchor.getAttribute('href').substr(1)
+        const blockID = anchor.getAttribute('href').substr(1);
 
         document.getElementById(blockID).scrollIntoView({
             behavior: 'smooth',
@@ -43,9 +43,18 @@ window.onscroll = () => {
     // console.log(scrollY)
     if (scrollY > 500) {
         header.classList.add('header__fixed');
-        headerContent.classList.add("header__content-fixed")
+        headerContent.classList.add("header__content-fixed");
     } else {
         header.classList.remove('header__fixed');
-        headerContent.classList.remove("header__content-fixed")
+        headerContent.classList.remove("header__content-fixed");
     }
 }
+
+
+const headerBurger = document.getElementById("headerBurger");
+const menuBlock = document.getElementById("menuBlock");
+
+function switchMenu() {
+    menuBlock.classList.toggle('d-none');    
+}
+headerBurger.addEventListener('click', switchMenu);
