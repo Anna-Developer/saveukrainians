@@ -1,5 +1,20 @@
 "use strict";
 
+const headerBurger = document.getElementById("headerBurger");
+const menuBlock = document.getElementById("menuBlock");
+const body = document.getElementById("body")
+const menuLinks = document.querySelectorAll(".clicked")
+
+function switchMenu() {
+    menuBlock.classList.toggle("d-none");
+    body.classList.toggle("hide-content");
+}
+headerBurger.addEventListener('click', switchMenu);
+for (let i = 0; i < menuLinks.length; i++) {
+    menuLinks[i].addEventListener('click', () => menuBlock.classList.add("d-none"));
+}
+
+
 let slideIndex = 0;
 showSlides();
 
@@ -49,15 +64,3 @@ window.onscroll = () => {
         headerContent.classList.remove("header__content-fixed");
     }
 }
-
-
-const headerBurger = document.getElementById("headerBurger");
-const menuBlock = document.getElementById("menuBlock");
-const body = document.getElementById("body")
-
-function switchMenu() {
-    menuBlock.classList.toggle("d-none");
-    headerBurger.classList.toggle("active");
-    body.classList.toggle("hide-content")
-}
-headerBurger.addEventListener('click', switchMenu);
